@@ -22,6 +22,19 @@ function makeAllCombs(arr) {
 	return combs;
 }
 
+function combs10(arr) {
+	var result = [];
+	var combs = makeAllCombs(arr);
+
+	for (var i = 0; i < combs.length; i++) {
+		if(sumIs10(combs[i])) {
+			result.push(combs[i]);
+		}
+	}
+
+	return result;
+}
+
 function nDigitComb(arr, n) {
 
 	var counters = [];
